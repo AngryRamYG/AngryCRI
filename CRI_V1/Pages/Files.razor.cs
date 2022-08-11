@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using CRI_V1.Data;
 
 namespace CRI_V1.Pages
 {
