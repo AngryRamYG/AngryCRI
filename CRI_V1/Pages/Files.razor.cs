@@ -14,8 +14,8 @@ namespace CRI_V1.Pages
 
         private MarkupString HTMLcontents;
         private static readonly HttpClient httpClient = new();
-        public CRI.wwwroot.Data.CRI ActiveFile { get; set; }
-        public static CRI.Data.CRIModels ActiveCRI { get; set; } = new CRI.Data.CRIModels();
+        public CRI ActiveFile { get; set; }
+        public static CRIModel ActiveCRI { get; set; } = new CRIModel();
 
         public static String repositoryName;
         public static String repositoryproject;
