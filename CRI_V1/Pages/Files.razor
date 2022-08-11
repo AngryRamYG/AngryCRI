@@ -4,7 +4,7 @@
        <li><h3>Files :   .md</h3></li>
         @if(ActiveCRI.Files != null)
         {
-            @foreach (CRI file in ActiveCRI.Files)
+            @foreach (CRIFile file in ActiveCRI.Files)
             {
              <li><button onclick="@(async () => await FillCRIContent(@file.Path))">@file.Label </button></li>
             }

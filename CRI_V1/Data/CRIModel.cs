@@ -1,14 +1,16 @@
 ﻿
+using static CRI_V1.Data.CRIModel;
+
 namespace CRI_V1.Data
 {
-    public class CRIModel
+    public class CRIInfo
     {
-        public List<CRI.MDTab> MDTab { get; set; }
-        public CRI.UserCustomization UserCustomization { get; set; }
-        public CRI.SocialMedia SocialMedia { get; set; }
-        public CRI.AboutUser AboutUser { get; set; }
-        public CRI.MDFileCustomization MDFileCustomization { get; set; }
-        public CRI.MDFile MDFile { get; set; }
+
+        public UserCustomization UserCustomization {get;set;}
+        public SocialMedia SocialMedia { get;set;}
+        public AboutUser AboutUser { get;set;}
+        public MDFileCustomization MDFileCustomization { get;set;}
+        public List<MDTab> MDTabs { get;set;}
 
     }
 }
