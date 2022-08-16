@@ -1,14 +1,21 @@
 ﻿@page "/{name}/{project}"
 <nav>
-   <ul>
-       <li><h3>Files :   .md</h3></li>
-        @if(ActiveCRI.Files != null)
+    <ul>
+        <li><h3>Files :   .md</h3></li>
+        @*@if (ActiveCRI.Files != null)
         {
             @foreach (CRIFile file in ActiveCRI.Files)
             {
-             <li><button onclick="@(async () => await FillCRIContent(@file.Path))">@file.Label </button></li>
+                <li><button onclick="@(async () => await FillCRIContent(@file.Path))">@file.Label </button></li>
             }
-        }
+        }*@
+          
+                @foreach (DemoTabModel Tab in CRIListDemo.FileTabs)
+                {
+                    <li><button onclick="@(async () => await FillCRIDemoContent(@Tab.Paths))">@Tab.FileTitle </button></li>
+                }
+           
+        
     </ul>
 </nav>
 
@@ -19,20 +26,35 @@
             <h2>Repository Name: <span> @project </span></h2>
         </div>
         <div>
-            <img src="/img/user.png"  />
+            <img src="/img/user.png" />
         </div>
     </div>
     <div class="info-desc">
-        
-     @if (ActiveFile != null)
-         {
+@*
+        @if (ActiveFile != null)
+        {
             @if (ActiveFile.Content == null)
             {
                 <p>loading content...</p>
             }
             else
             {
-                @HTMLcontents            
+                @HTMLcontents
+            }
+        }*@
+
+        @if (ActiveDemoTab != null)
+        {
+            @if (ActiveDemoTab.Contents == null)
+            {
+                <p>loading content...</p>
+            }
+            else
+            {
+                foreach (MarkupString item in HTMLDemoContents)
+                {
+                    @item
+                }
             }
         }
 
