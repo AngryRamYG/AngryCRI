@@ -14,9 +14,5 @@ namespace CRI_V1.Pages
             NavigationManager.NavigateTo("/" + s[0] + "/" + s[1]);
 
         }
-
-
-
-
     }
 }
