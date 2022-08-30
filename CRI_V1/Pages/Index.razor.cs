@@ -10,6 +10,9 @@ namespace CRI_V1.Pages
             var s = RepositoryName.Split("/");
             NavigationManager.NavigateTo("/" + s[0] + "/" + s[1]);
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
     }
 }

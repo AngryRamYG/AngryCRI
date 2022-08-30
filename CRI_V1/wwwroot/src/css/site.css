@@ -1,8 +1,16 @@
+<<<<<<< HEAD:CRI_V1/wwwroot/css/Site.css
 ﻿:root {
   --primaryColor: #00698f;
   --secondaryColor: #008390;
   --colorText: #3e3e3e;
   --headerHeight: 100px;
+=======
+/*testinghahshshs*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c:CRI_V1/wwwroot/src/css/site.css
 }
 .Selectable {
   -webkit-touch-callout: initial;
@@ -89,6 +97,7 @@ main aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 main section > div,
 main aside > div {

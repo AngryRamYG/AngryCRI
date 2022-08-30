@@ -1,4 +1,5 @@
 ﻿@page "/"
+<<<<<<< HEAD
 <section>
     <div class="landing">
         <div class="form">
@@ -17,7 +18,18 @@
                     <button class="--btn-primary" @onclick="TestAsync">Search</button>
                 </div>
         </div>
+=======
+<section class="landing">
+    
+    <div class="--input-search">
+        <input type="text" @bind-value="RepositoryName" placeholder="MeatRocket/CRI-testing"> </input>
+        <button><em class="fa-solid fa-magnifying-glass" @onclick="TestAsync"></em></button>
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
     </div>
+    <div class="form-button">
+        <button class="--btn-primary" @onclick="TestAsync"> Search </button>
+    </div>
+
 
 </section>
 

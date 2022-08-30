@@ -13,7 +13,6 @@ namespace CRI_V1.Data
             public string CardTextColor { get; set; }
 
         }
-
         public class SocialMedia
         {
             public string Github { get; set; }
@@ -23,7 +22,6 @@ namespace CRI_V1.Data
             public string Twitter { get; set; }
 
         }
-
         public class AboutUser
         {
             public string ProfilePic { get; set; }
@@ -32,15 +30,11 @@ namespace CRI_V1.Data
             public string UserDescription { get; set; }
             public SocialMedia SocialMedia { get; set; }
         }
-
-
-
         public class MDFileCustomization
         {
             public string MDBackgroundColor { get; set; }
             public string MDTextColor { get; set; }
         }
-
         public class MDFile
         {
             public string FileName { get; set; }

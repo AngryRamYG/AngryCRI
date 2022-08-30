@@ -1,4 +1,5 @@
 ﻿@page "/{name}/{project}"
+<<<<<<< HEAD
 @using static CRI_V1.Data.CRIModel
 
 
@@ -32,12 +33,34 @@
     </div>
 </div>
 
+=======
+<nav>
+    <ul>
+        <li><h3>Files :   .md</h3></li>
+        @*@if (ActiveCRI.Files != null)
+        {
+            @foreach (CRIFile file in ActiveCRI.Files)
+            {
+                <li><button onclick="@(async () => await FillCRIContent(@file.Path))">@file.Label </button></li>
+            }
+        }*@
+          
+                @foreach (DemoTabModel Tab in CRIListDemo.FileTabs)
+                {
+                    <li><button onclick="@(async () => await FillCRIDemoContent(@Tab.Paths))">@Tab.FileTitle </button></li>
+                }
+           
+        
+    </ul>
+</nav>
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
 
 <section class="info">
     <div>
         <div class="info-name">
             <h1 class="--title">@name/@project</h1>
         </div>
+<<<<<<< HEAD
         @if (ActiveTab != null)
         {
             <div class="info-file">
@@ -45,6 +68,40 @@
                 <h4>Last Update: 18/02/2022</h4>
             </div>
             <div class="info-desc">
+=======
+        <div>
+            <img src="/img/user.png" />
+        </div>
+    </div>
+    <div class="info-desc">
+@*
+        @if (ActiveFile != null)
+        {
+            @if (ActiveFile.Content == null)
+            {
+                <p>loading content...</p>
+            }
+            else
+            {
+                @HTMLcontents
+            }
+        }*@
+
+        @if (ActiveDemoTab != null)
+        {
+            @if (ActiveDemoTab.Contents == null)
+            {
+                <p>loading content...</p>
+            }
+            else
+            {
+                foreach (MarkupString item in HTMLDemoContents)
+                {
+                    @item
+                }
+            }
+        }
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
 
                 @if (ActiveTab.Contents == null)
                 {
