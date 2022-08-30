@@ -2,7 +2,11 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+<<<<<<< HEAD
+using static CRI_V1.Data.CRIModel;
+=======
 using CRI_V1.Data;
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
 
 namespace CRI_V1.Pages
 {
@@ -13,13 +17,15 @@ namespace CRI_V1.Pages
         [Parameter]
         public string project { get; set; }
 
-        private MarkupString HTMLcontents;
         private static readonly HttpClient httpClient = new();
-        public CRIFile ActiveFile { get; set; }
-        public static CRI ActiveCRI { get; set; } = new();
-
         public static String repositoryName;
         public static String repositoryproject;
+        public static Boolean show = false ;
+        public static CRITabList CRIListDemo { get; set; } = new();
+        public CRITab ActiveTab { get; set; } = new();
+        public static List<CRITab> Tabs { get; set; } = new();
+        private List<MarkupString> MarkupContents = new();
+
 
         //Model for new Demo starts here
         public static DemoCRIList CRIListDemo { get; set; } = new();
@@ -37,7 +43,11 @@ namespace CRI_V1.Pages
         public async Task TestAsync()
         {
             //await GetFilesFromCRI(GenerateFileUrl("/.criconfig.json"));
+<<<<<<< HEAD
+            await GetFilesFromCRI(GenerateFileUrl("/.cridemoconfig.json"));
+=======
             await GetDemoFilesFromCRI(GenerateFileUrl("/.cridemoconfig.json"));
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
         }
 
         private static string GenerateFileUrl(string filePath)
@@ -47,6 +57,12 @@ namespace CRI_V1.Pages
 
         public async Task GetFilesFromCRI(string url)
         {
+<<<<<<< HEAD
+            CRIListDemo.Tabs.Clear();
+            var tempResult = await GetFileContent(url);
+            CRIListDemo = JsonConvert.DeserializeObject<CRITabList>(tempResult);
+            Console.WriteLine("this is sparta ! "+CRIListDemo);
+=======
             ActiveCRI.Files.Clear();
             ActiveCRI = JsonConvert.DeserializeObject<CRI>(await GetFileContent(url));
         }
@@ -58,6 +74,7 @@ namespace CRI_V1.Pages
             Console.WriteLine(CRIListDemo);
             //DemoModelList.Clear();
             //DemoModelList = JsonConvert.DeserializeObject<List<DemoTabModel>>(await GetFileContent(url));
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
         }
 
         private static async Task<string> GetFileContent(string url)
@@ -67,6 +84,18 @@ namespace CRI_V1.Pages
             return await httpClient.GetStringAsync(url);
         }
 
+<<<<<<< HEAD
+        public async Task FillCRIContent(List<string> Paths)
+        {
+            ActiveTab = CRIListDemo.Tabs.First(key => key.Paths == Paths);
+            //filling contents if they arent filled
+            if (ActiveTab.Contents.Count == 0)
+                foreach (string path in Paths)
+                {
+                    var temp = await GetFileContent(GenerateFileUrl(path));
+                    ActiveTab.Contents.Add(temp);
+                }
+=======
 
         public async Task FillCRIContent(String path)
         {
@@ -75,9 +104,21 @@ namespace CRI_V1.Pages
                 ActiveFile.Content = await GetFileContent(GenerateFileUrl(ActiveFile.Path));
             StringToHtml(path);
             this.StateHasChanged();
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
 
+            DemoContentToHtml(ActiveTab.Contents);
+            this.StateHasChanged();
         }
 
+<<<<<<< HEAD
+        public void DemoContentToHtml(List<string> contents)
+        {
+            MarkupContents.Clear();
+
+            foreach (string content in contents)
+            {
+                MarkupContents.Add((MarkupString)Markdig.Markdown.ToHtml(content ?? ""));
+=======
         public async Task FillCRIDemoContent(List<string> Paths)
         {
             ActiveDemoTab = CRIListDemo.FileTabs.First(key => key.Paths == Paths);
@@ -109,7 +150,9 @@ namespace CRI_V1.Pages
             foreach (string content in contents)
             {
                 HTMLDemoContents.Add((MarkupString)Markdig.Markdown.ToHtml(content ?? ""));
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
             }
         }
     }
+
 }

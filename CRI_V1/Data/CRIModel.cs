@@ -1,16 +1,28 @@
-﻿
+﻿using System.Runtime.Serialization;
 using static CRI_V1.Data.CRIModel;
 
 namespace CRI_V1.Data
 {
-    public class CRIInfo
+    public class CRIModel
     {
+        [DataContract]
+        public class CRITab
+        {
+            [DataMember]
+            public string TabTitle;
+            [DataMember]
+            public List<string> Paths;
+            [DataMember]
+            public List<CRITab> SubTabs;
+            [DataMember]
+            public List<string> Contents = new();
+        }
 
-        public UserCustomization UserCustomization {get;set;}
-        public SocialMedia SocialMedia { get;set;}
-        public AboutUser AboutUser { get;set;}
-        public MDFileCustomization MDFileCustomization { get;set;}
-        public List<MDTab> MDTabs { get;set;}
-
+        [DataContract]
+        public class CRITabList
+        {
+            [DataMember]
+            public List<CRITab> Tabs { get; set; } = new();
+        }
     }
 }

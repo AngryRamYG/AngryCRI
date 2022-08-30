@@ -1,4 +1,6 @@
 
+using Microsoft.AspNetCore.Hosting.StaticWebAssets;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

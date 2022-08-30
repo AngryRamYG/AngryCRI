@@ -1,10 +1,38 @@
+<<<<<<< HEAD
+﻿<header>
+    <div class="header">
+        <div class="header-logo">
+            <a href="https://angrymonkeyagency.com/">
+                <img src="img/logo-name.png" alt="logo name" />
+            </a>
+        </div>
+        <div class="header-name">
+            <h4>Cloud Repository Information </h4>
+        </div>
+=======
 ﻿<header class="header">
-    <div class="header-logo">	
+
+
+    <div class="header-name">
+        <h4>Cloud Repository Information </h4>
+>>>>>>> 6c5f7a03e8e6cd801afb09c83b84a1267d1cd87c
+    </div>
+    <div class="header-logo">
         <a href="https://angrymonkeyagency.com/">
             <img src="img/logo-name.png" alt="logo name" />
         </a>
-	</div>
-    <div class="header-name">
-        <h4>Cloud Repository Information </h4>
     </div>
 </header>
+
+@code {
+    public static string RepositoryName { get; set; } = "MeatRocket/CRI-testing";
+
+
+
+    public async Task TestAsync()
+    {
+        var s = RepositoryName.Split("/");
+        NavigationManager.NavigateTo("/" + s[0] + "/" + s[1]);
+
+    }
+}
