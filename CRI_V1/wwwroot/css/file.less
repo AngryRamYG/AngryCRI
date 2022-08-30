@@ -1,0 +1,83 @@
+﻿@import 'variables.less';
+
+body {
+    main {
+
+        .info {
+            width: 100%;
+            height: auto;
+
+            > div {
+                width: 100%;
+                padding: 0;
+                max-width: 90%;
+                margin: 0 auto;
+                margin-top: 65px;
+            }
+
+
+            &-name {
+                text-align: -webkit-center;
+                text-align: center;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            &-file {
+                display: flex;
+                margin-top: 50px;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                color: var(--colorText);
+
+                button {
+                    color: var(--colorText);
+                }
+            }
+        }
+    }
+}
+
+@media @break-medium
+{
+    body {
+        main {
+            .info {
+                margin-left: 230px;
+                width: calc(100% - 230px);
+
+                > div {
+                    margin-top: 0px;
+                    max-width: 100%;
+                }
+
+                &-file {
+                    flex-direction: row;
+                    margin-right: 50px;
+                }
+
+                &-desc {
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media @break-large
+{
+    body {
+        main {
+            .info {
+                &-name {
+                    top: 88px;
+                }
+
+                &-file {
+                    top: 340px;
+                }
+            }
+        }
+    }
+}
