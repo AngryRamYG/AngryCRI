@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RN8aNWlKjB9E3Fd4o17dHfzW+Q2cpzxrJVn2WkH/MUpNtqahgciawfWFBhjE3QHk27EFcyCPe3dJOMNXqYoWlA==",
+  "dgSpecHash": "Nn7V+YG1YvLIMipTOA3ozVN047a4t9YdnhFxzYMwN68wG9U4HdzMWvqA43IDZwh5SsPuQizhtGEBp4H2hvFf6A==",
   "success": true,
-  "projectFilePath": "D:\\work\\CRI_V2\\CRI_V1\\CRI_V1.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\CRI_V1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Wissam FARHAT\\.nuget\\packages\\markdig\\0.30.2\\markdig.0.30.2.nupkg.sha512",
-    "C:\\Users\\Wissam FARHAT\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\USER\\.nuget\\packages\\markdig\\0.30.2\\markdig.0.30.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

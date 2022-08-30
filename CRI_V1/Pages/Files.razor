@@ -1,22 +1,23 @@
 ﻿@page "/{name}/{project}"
+@using static CRI_V1.Data.CRIModel
 
 
 <aside class="@(show?"--show":"")">
     <div class="nav">
-        <div class="nav-close"  @onclick="@(()=>show=!show)">X</div>
+        <div class="nav-close" @onclick="@(()=>show=!show)">X</div>
         <div class="nav-user">
             <div class="nav-user-img">
-                <img src="img/user.jpeg" alt="user image" />
+                <img src="img/user.png" alt="user image" />
             </div>
             <label>User name</label>
         </div>
         <div class="nav-file">
             <ul>
-                @if (ActiveCRI.Files != null)
+                @if (CRIListDemo.Tabs != null)
                 {
-                    @foreach (CRIFile file in ActiveCRI.Files)
+                    @foreach (CRITab Tab in CRIListDemo.Tabs)
                     {
-                        <li><button  onclick="@(async () => await FillCRIContent(@file.Path))">@file.Label </button></li>
+                        <li><button onclick="@(async () => await FillCRIContent(Tab.Paths))">@Tab.TabTitle </button></li>
                     }
                 }
             </ul>
@@ -35,38 +36,28 @@
 <section class="info">
     <div>
         <div class="info-name">
-            <h1 class="--title">Repository/Name</h1>
+            <h1 class="--title">@name/@project</h1>
         </div>
-        <div class="info-file">
-            <h1 class="--title">File1.md</h1>
-            <h4>Last Update: 18/02/2022</h4>
-        </div>
-        <div class="info-desc">
-            @if (ActiveFile != null)
-            {
-                @if (ActiveFile.Content == null)
+        @if (ActiveTab != null)
+        {
+            <div class="info-file">
+                <h1 class="--title">@ActiveTab.TabTitle</h1>
+                <h4>Last Update: 18/02/2022</h4>
+            </div>
+            <div class="info-desc">
+
+                @if (ActiveTab.Contents == null)
                 {
                     <p>loading content...</p>
                 }
                 else
                 {
-                    @HTMLcontents
+                    foreach (MarkupString item in MarkupContents)
+                    {
+                        @item
+                    }
                 }
-            }
-        </div>
+            </div>
+        }
     </div>
 </section>
-@*<nav>
-   <ul>
-       <li><h3>Files :   .md</h3></li>
-        
-    </ul>
-</nav>
-
-
-
-
-
-    </div>
-</section>
-*@

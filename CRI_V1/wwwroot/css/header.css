@@ -1,6 +1,7 @@
 ﻿:root {
   --primaryColor: #00698f;
-  --darkGrey: #008390;
+  --secondaryColor: #008390;
+  --colorText: #3e3e3e;
   --headerHeight: 100px;
 }
 .Selectable {
@@ -21,6 +22,11 @@
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;
+}
+@media only screen and (min-width: 800px) {
+  :root {
+    --headerHeight: 70px;
+  }
 }
 header {
   position: fixed;

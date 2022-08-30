@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BoW0tWjEpyexcAvlq9GtIrsj1ucy2B4uhu9EIzD+nqY=",
+  "Hash": "k5ddxOdoMPDhDC1e3S+DXURS4TqYw2ADcT9ZxxahuyI=",
   "Source": "CRI_V1",
   "BasePath": "_content/CRI_V1",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CRI_V1\\wwwroot",
       "Source": "CRI_V1",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\aside.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\aside.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/aside.less",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\aside.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\file.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\file.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/file.less",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\css\\file.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\header.css",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\header.css",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/header.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.css"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\header.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\header.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/header.less",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\header.min.css",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\header.min.css",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/header.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.min.css"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\index.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\index.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/index.less",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\index.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\Site.css",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\Site.css",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/Site.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Site.css"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\Site.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\Site.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/Site.less",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Site.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\Site.min.css",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\Site.min.css",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/Site.min.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Site.min.css"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\theme.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\theme.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/theme.less",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\theme.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\css\\variables.less",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\css\\variables.less",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "css/variables.less",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\variables.less"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\favicon.ico",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\img\\Logo.png",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\img\\Logo.png",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "img/Logo.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Logo.png"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\img\\logo-name.png",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\img\\logo-name.png",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "img/logo-name.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo-name.png"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\img\\Logowhite.png",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\img\\Logowhite.png",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "img/Logowhite.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Logowhite.png"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\img\\search.svg",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\img\\search.svg",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "img/search.svg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\img\\search.svg"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\img\\user.jpeg",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\img\\user.jpeg",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "img/user.jpeg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user.jpeg"
     },
     {
-      "Identity": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\img\\user.png",
+      "Identity": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\img\\user.png",
       "SourceId": "CRI_V1",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\work\\CRI_V2\\CRI_V1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Downloads\\CRI_V2\\CRI_V1\\wwwroot\\",
       "BasePath": "_content/CRI_V1",
       "RelativePath": "img/user.png",
       "AssetKind": "All",

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using static CRI_V1.Data.CRIModel;
 
 namespace CRI_V1.Pages
 {
@@ -12,47 +13,39 @@ namespace CRI_V1.Pages
         [Parameter]
         public string project { get; set; }
 
-
-        private MarkupString HTMLcontents;
         private static readonly HttpClient httpClient = new();
-        public CRIFile ActiveFile { get; set; }
-        public static CRI ActiveCRI { get; set; } = new();
-
         public static String repositoryName;
         public static String repositoryproject;
-        public bool show = false;
+        public static Boolean show = false ;
+        public static CRITabList CRIListDemo { get; set; } = new();
+        public CRITab ActiveTab { get; set; } = new();
+        public static List<CRITab> Tabs { get; set; } = new();
+        private List<MarkupString> MarkupContents = new();
 
 
         protected override async Task OnInitializedAsync()
         {
-
             repositoryName = name;
             repositoryproject = project;
-
             await TestAsync();
         }
         public async Task TestAsync()
         {
-            await GetFilesFromCRI(GenerateFileUrl("/.criconfig.json"));
-
-
+            //await GetFilesFromCRI(GenerateFileUrl("/.criconfig.json"));
+            await GetFilesFromCRI(GenerateFileUrl("/.cridemoconfig.json"));
         }
 
         private static string GenerateFileUrl(string filePath)
         {
-
             return $"https://raw.githubusercontent.com/{repositoryName}/{repositoryproject}/main{filePath}";
-
-
-
         }
 
         public async Task GetFilesFromCRI(string url)
         {
-            ActiveCRI.Files.Clear();
-            ActiveCRI = JsonConvert.DeserializeObject<CRI>(await GetFileContent(url));
-
-
+            CRIListDemo.Tabs.Clear();
+            var tempResult = await GetFileContent(url);
+            CRIListDemo = JsonConvert.DeserializeObject<CRITabList>(tempResult);
+            Console.WriteLine("this is sparta ! "+CRIListDemo);
         }
 
         private static async Task<string> GetFileContent(string url)
@@ -62,23 +55,30 @@ namespace CRI_V1.Pages
             return await httpClient.GetStringAsync(url);
         }
 
-
-        public async Task<string> FillCRIContent(String path)
+        public async Task FillCRIContent(List<string> Paths)
         {
-            ActiveFile = ActiveCRI.Files.First(key => key.Path.Equals(path, StringComparison.OrdinalIgnoreCase));
-            if (ActiveFile.Content == null)
-                ActiveFile.Content = await GetFileContent(GenerateFileUrl(ActiveFile.Path));
-            StringToHtml(path);
+            ActiveTab = CRIListDemo.Tabs.First(key => key.Paths == Paths);
+            //filling contents if they arent filled
+            if (ActiveTab.Contents.Count == 0)
+                foreach (string path in Paths)
+                {
+                    var temp = await GetFileContent(GenerateFileUrl(path));
+                    ActiveTab.Contents.Add(temp);
+                }
+
+            DemoContentToHtml(ActiveTab.Contents);
             this.StateHasChanged();
-            return ActiveFile.Content;
-
         }
-        public void StringToHtml(string path)
+
+        public void DemoContentToHtml(List<string> contents)
         {
-            CRIFile cri;
-            cri = ActiveCRI.Files.First(key => key.Path.Equals(path, StringComparison.OrdinalIgnoreCase));
-            string s = Markdig.Markdown.ToHtml(cri.Content ?? "");
-            HTMLcontents = (MarkupString)s;
+            MarkupContents.Clear();
+
+            foreach (string content in contents)
+            {
+                MarkupContents.Add((MarkupString)Markdig.Markdown.ToHtml(content ?? ""));
+            }
         }
     }
+
 }

@@ -43,7 +43,7 @@ body {
 }
 
 main {
-    padding-top: var(--headerHeight);
+    margin-top: var(--headerHeight);
 
     section,
     aside {
@@ -111,7 +111,7 @@ main {
     padding: 15px 15px;
     background-color: transparent;
     border: 1px solid var(--primaryColor);
-    color: var(--darkGrey);
+    color: var(--secondaryColor);
     transition: 0.3s ease-out;
     cursor:pointer;
     overflow:hidden;
@@ -149,7 +149,7 @@ main {
     font-size: 2rem;
     position: relative;
     width: fit-content;
-
+    color:var(--colorText);
     &::after {
         position: absolute;
         content: "";
@@ -157,6 +157,6 @@ main {
         height: 4px;
         left: 0;
         bottom: -10px;
-        background-color: var(--darkGrey);
+        background-color: var(--secondaryColor);
     }
 }

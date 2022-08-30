@@ -2,7 +2,7 @@
 
 namespace CRI_V1.Data
 {
-    public class CRIModel
+    public class CRIDemoModel
     {
         public class UserCustomization
         {

@@ -1,6 +1,7 @@
 ﻿:root {
   --primaryColor: #00698f;
-  --darkGrey: #008390;
+  --secondaryColor: #008390;
+  --colorText: #3e3e3e;
   --headerHeight: 100px;
 }
 .Selectable {
@@ -21,6 +22,11 @@
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;
+}
+@media only screen and (min-width: 800px) {
+  :root {
+    --headerHeight: 70px;
+  }
 }
 :root {
   --maxWidth: 1000px;
@@ -76,7 +82,7 @@ body {
   overflow-x: hidden;
 }
 main {
-  padding-top: var(--headerHeight);
+  margin-top: var(--headerHeight);
 }
 main section,
 main aside {
@@ -135,7 +141,7 @@ main aside > div {
   padding: 15px 15px;
   background-color: transparent;
   border: 1px solid var(--primaryColor);
-  color: var(--darkGrey);
+  color: var(--secondaryColor);
   transition: 0.3s ease-out;
   cursor: pointer;
   overflow: hidden;
@@ -169,6 +175,7 @@ main aside > div {
   font-size: 2rem;
   position: relative;
   width: fit-content;
+  color: var(--colorText);
 }
 .--title::after {
   position: absolute;
@@ -177,7 +184,7 @@ main aside > div {
   height: 4px;
   left: 0;
   bottom: -10px;
-  background-color: var(--darkGrey);
+  background-color: var(--secondaryColor);
 }
 header {
   position: fixed;
@@ -248,6 +255,7 @@ body main .landing {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 body main .landing .form {
   display: flex;
@@ -258,7 +266,7 @@ body main .landing .form {
   gap: 30px;
 }
 body main .landing .form-img {
-  width: 35%;
+  width: 200px;
 }
 body main .landing .form-img img {
   width: 100%;
@@ -308,6 +316,10 @@ body main .info-file {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  color: var(--colorText);
+}
+body main .info-file button {
+  color: var(--colorText);
 }
 @media only screen and (min-width: 800px) {
   body main .info {
@@ -370,7 +382,6 @@ body main aside .nav-user {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 220px;
   width: 100%;
   padding-bottom: 18px;
   border-bottom: 1px solid white;
@@ -381,8 +392,7 @@ body main aside .nav-user-img {
 }
 body main aside .nav-user-img img {
   width: 100%;
-  object-fit: cover;
-  object-position: 0 20px;
+  object-fit: fill;
 }
 body main aside .nav-user label {
   color: white;
@@ -446,9 +456,10 @@ body main aside .nav-file ul li ul li span::before {
 }
 body main .mobile {
   position: absolute;
-  top: 165px;
+  top: 150px;
   left: 0;
   width: 100%;
+  z-index: 9999;
 }
 body main .mobile > div {
   display: flex;
@@ -478,8 +489,14 @@ body main .mobile > div span {
   body main aside .nav {
     width: 100%;
   }
+  body main aside .nav-user {
+    top: 65px;
+  }
   body main aside .nav-close {
     display: none;
+  }
+  body main aside .nav-file {
+    top: 265px;
   }
   body main .mobile {
     display: none;
